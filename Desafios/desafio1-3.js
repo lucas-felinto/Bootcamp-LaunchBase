@@ -32,7 +32,7 @@ function checaUsuarioUsaCSS(usuario) {
 
 for (let i = 0; i < usuarios.length; i++) {
     const usuarioTrabalhaComCSS = checaUsuarioUsaCSS(usuarios[i]) //Para cada true guardado na função anterior, a variável usuarioTrabalhaComCSS receberá o nome do usuário
-if (usuarioTrabalhaComCSS) { //Se o usuário trabalha com CSS, então:
+if (usuarioTrabalhaComCSS == true) { //Se o usuário trabalha com CSS, então:
     console.log(`O usuário ${usuarios[i].nome} trabalha com CSS`)
     }
 }
