@@ -1,81 +1,81 @@
-const alunosA = [
+const classA = [
     {
-        nome: 'Lucas',
-        nota: 10
+        name: 'Lucas',
+        grade: 10
     },
     {
-        nome: 'Aluno 2',
-        nota: 8
+        name: 'student 2',
+        grade: 8
     },
     {
-        nome: 'Aluno 3',
-        nota: 7
+        name: 'student 3',
+        grade: 7
     }
 ]
 
-const alunosB = [
+const classB = [
     {
-        nome: 'Miguel',
-        nota: 7
+        name: 'Miguel',
+        grade: 7
     },
     {
-        nome: 'Aluno 4',
-        nota: 5
+        name: 'student 4',
+        grade: 5
     },
     {
-        nome: 'Aluno 5',
-        nota: 3
+        name: 'student 5',
+        grade: 3
     }
 ]
 
-//Função para calcular a média dos alunos das turmas A e B, retornando o valor para fora da função.
-function calculaMedia(alunos) {
-    let soma = 0
-    for (let i = 0; i < alunos.length; i++) { //Leia-se: Repita essa função até atingir o número de alunos
-        soma = soma + alunos[i].nota
+//Função para calcular a média dos students das classs A e B, retornando o valor para fora da função.
+function calculeAverage(students) {
+    let sum = 0
+    for (let i = 0; i < students.length; i++) { //Leia-se: Repita essa função até atingir o número de students
+        sum = sum + students[i].grade
     }
-    const media = soma / alunos.length
-    return media //aqui retorna a média para as constas media1 e media2
+    const average = sum / students.length
+    return average //aqui retorna a média para as constas average1 e average2
 }
 
 //variável recebe os valores retornados da função, inserido-os em suas respectivas turmas
-const media1 = calculaMedia(alunosA) 
-const media2 = calculaMedia(alunosB)
+const average1 = calculeAverage(classA) 
+const average2 = calculeAverage(classB)
 
-//função para ler a mensagem no console, recebendo a média e a turma
-function enviarMensagem(media, turma) {
-    if (media > 5) {
-        console.log(`A média da ${turma} foi ${media}. Parabéns`)
+//função para ler a mensagem no console, recebendo a média e a class
+function sendMessage(average, turma) {
+    if (average > 5) {
+        console.log(`A média da ${turma} foi ${average}. Parabéns`)
     } else {
-        console.log(`A média da turma ${turma} foi menor que 5.`)
+        console.log(`A média da class ${turma} foi menor que 5.`)
     }
 }
 
-enviarMensagem(media1, 'turmaA') //Passando parametros para dentro do bloco de código
-enviarMensagem(media2, 'turmaB') //Passando parametros para dentro do bloco de código
+sendMessage(average1, 'Class A') //Passando parametros para dentro do bloco de código
+sendMessage(average2, 'Class B') //Passando parametros para dentro do bloco de código
 
-//Marcar aluno como reprovado
+//Marcar student como Flunked
 //E enviar como mensagem
 
-function marcarComoReprovado(aluno) { //Função para marcar aluno como reprovado
-    aluno.reprovado = false //Declaro como falso
-    if (aluno.nota < 5) {
-        aluno.reprovado = true // Identifica cada aluno reprovado
+function checkFlunked(student) { //Função para marcar student como Flunked
+    student.Flunked = false //Declaro como falso
+    if (student.grade < 5) {
+        student.Flunked = true // Identifica cada student Flunked
     }
 } 
 
-function enviarMensagemReprovado(aluno) {
-    if (aluno.reprovado == true) {
-        console.log(`O aluno ${aluno.nome} está reprovado`)
+function sendMessageFlunked(student) {
+    if (student.Flunked == true) {
+        console.log(`O student ${student.name} está Flunked`)
     }
 }
 
-function alunoReprovado(alunos) { //junta as duas funções anteriores em uma só
-    for (let aluno of alunos) {
-        marcarComoReprovado(aluno)
-        enviarMensagemReprovado(aluno)
+function studentFlunked(students) { //junta as duas funções anteriores em uma só
+    for (let student of students) {
+        checkFlunked(student)
+        sendMessageFlunked(student)
     }
 }
 
-alunoReprovado(alunosA)
-alunoReprovado(alunosB)
+studentFlunked(classA)
+studentFlunked(classB)
