@@ -58,9 +58,9 @@ enviarMensagem(media2, 'turmaB') //Passando parametros para dentro do bloco de c
 //E enviar como mensagem
 
 function marcarComoReprovado(aluno) { //Função para marcar aluno como reprovado
-    aluno.reprovado = false; //Declaro como falso
+    aluno.reprovado = false //Declaro como falso
     if (aluno.nota < 5) {
-        aluno.reprovado = true; // Identifica cada aluno reprovado
+        aluno.reprovado = true // Identifica cada aluno reprovado
     }
 } 
 
@@ -72,7 +72,7 @@ function enviarMensagemReprovado(aluno) {
 
 function alunoReprovado(alunos) { //junta as duas funções anteriores em uma só
     for (let aluno of alunos) {
-        marcarComoReprovado(aluno);
+        marcarComoReprovado(aluno)
         enviarMensagemReprovado(aluno)
     }
 }
