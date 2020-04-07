@@ -28,17 +28,14 @@ const alunosB = [
     }
 ]
 
-//Função para calcular a média dos alunos das turmas A e B, retornando o valor para fora da função.
 function calculaMedia(alunos) {
     return ((alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3)
-}
+} //O parâmetro alunos dentro da função funciona como uma "variável" que vai receber o valor quando executar a função.
 
-//variável recebe os valores retornados da função
-const media1 = calculaMedia(alunosA) 
+const media1 = calculaMedia(alunosA) //executa a função, passando por parametro alunosA - substitui por alunos na função e retorna a média para a constante media1
 const media2 = calculaMedia(alunosB)
 
-//função para ler a mensagem no console, recebendo a média e a turma
-function enviarMensagem(media, turma) {
+function enviarMensagem(media, turma) { //Cria função com dois parametros - um recebe a media e outro a turma
     if (media > 5) {
         console.log(`A média da ${turma} foi ${media}. Parabéns`)
     } else {
@@ -46,5 +43,5 @@ function enviarMensagem(media, turma) {
     }
 }
 
-enviarMensagem(media1, 'turmaA') //Passando parametros para dentro do bloco de código
-enviarMensagem(media2, 'turmaB') //Passando parametros para dentro do bloco de código
+enviarMensagem(media1, 'turma A') //Passando parametros para dentro do bloco de código da função
+enviarMensagem(media2, 'turma B') //Passando parametros para dentro do bloco de código da função
