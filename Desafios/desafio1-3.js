@@ -1,15 +1,17 @@
+//Tecnologias
+
 const usuarios = [
     { 
         nome: 'Carlos', 
-        tecnologia: ['HTML', 'CSS'] 
+        tecnologias: ['HTML', 'CSS'] 
     },
     {
         nome: 'Jasmine',
-        tecnologia: ['JavaScript', 'CSS']
+        tecnologias: ['JavaScript', 'CSS']
     },
     {
         nome: 'Tuane',
-        tecnologia: ['HTML', 'Node.js']
+        tecnologias: ['HTML', 'Node.js']
     }
 ];
 
@@ -24,21 +26,71 @@ for (let i = 0; i < usuarios.length; i++) {
 //  }
 
 
-
-function checaUsuarioUsaCSS(usuario) {
-    for (let tecnologia of usuario.tecnologia) { //procura por tecnologia dentro de usuario > tecnlogia 
-        if (tecnologia == 'CSS') return true // se tecnologia = CSS retorna booleano true 
-    }
-    return false //porque return false?
-} //Ou seja, essa função cria um loop que percorre o array procurando usuários com tecnologia css, caso retorne TRUE, o usuário estára salvo dentro da função ChecarUsuarioUsaCSS, caso retorne FALSE, nada acontecerá
-
-for (let i = 0; i < usuarios.length; i++) {
-    const usuarioTrabalhaComCSS = checaUsuarioUsaCSS(usuarios[i]) //Executa a função checaUsuarioUsaCSS, retorna true or false em cada array [i]
-if (usuarioTrabalhaComCSS == true) {
-    console.log(`O usuário ${usuarios[i].nome} trabalha com CSS`)
-    }
+function checaSeUsuarioUsaCSS(usuario) {
+    for (let tecnologia of usuario.tecnologias) {
+        if (tecnologia == 'CSS')
+            return true
+        }
+        return false
 }
 
 
+function messageUser(usuario) {
+    for (let i = 0; i < usuario.length; i++) {
+        const usuarioTrabalhaComCSS = checaSeUsuarioUsaCSS(usuario[i])
 
-//Complicado
+        if (usuarioTrabalhaComCSS) {
+        console.log (`O usuário ${usuario[i].nome} trabalha com CSS`)
+        }
+    }
+}
+
+messageUser(usuarios)
+
+
+//Receitas e Despesas
+const users = [
+    {
+        name: 'Savio',
+        income: [115.3, 48.7, 98.3, 14.5],
+        expense: [85.3, 13.5, 19.9]
+    },
+    {
+        name: 'Marcio',
+        income: [24.6, 214.3, 45.3],
+        expense: [185.3, 12.1, 120.0]
+    },
+    {
+        name: 'Lucia',
+        income: [9.8, 120.3, 340.2, 45.3],
+        expense: [450.2, 29.9]
+    }
+]
+
+function balanceCalculet(income, expense) { //criada função para calcular a receita e a despesa para 2 parametros
+    const sumIncome = sumNumbers(income)
+    const sumExpense = sumNumbers(expense)
+
+    return sumExpense - sumIncome //retorna balanço
+}
+
+function sumNumbers(numeros) { //função para calcular a soma de income/expense, retorna para a função balanceCalculet
+    let sum = 0
+
+    for (let number of numeros) {
+        sum = sum + number
+    }
+
+    return sum
+    
+}
+
+for (let user of users) { //fim da função - uso das mensagens
+    const balance = balanceCalculet(user.income, user.expense)
+
+    if (balance > 0) {
+        console.log(`O usuário ${user.name} possui saldo POSITIVO de ${balance.toFixed(2)}`)
+    } else {
+        console.log(`O usuário ${user.name} possui saldo NEGATIVO de ${balance.toFixed(2)}`)
+    }
+}
