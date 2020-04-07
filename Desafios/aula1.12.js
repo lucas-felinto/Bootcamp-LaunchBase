@@ -28,17 +28,15 @@ const classB = [
     }
 ]
 
-//Função para calcular a média dos students das classs A e B, retornando o valor para fora da função.
-function calculeAverage(students) {
+function calculeAverage(students) { //Cálculo da média para número de alunos na classe - students recebe class A e class B
     let sum = 0
-    for (let i = 0; i < students.length; i++) { //Leia-se: Repita essa função até atingir o número de students
+    for (let i = 0; i < students.length; i++) { // início ; teste ; incremento
         sum = sum + students[i].grade
     }
     const average = sum / students.length
-    return average //aqui retorna a média para as constas average1 e average2
+    return average //retorna o valor para o parâmetro
 }
 
-//variável recebe os valores retornados da função, inserido-os em suas respectivas turmas
 const average1 = calculeAverage(classA) 
 const average2 = calculeAverage(classB)
 
@@ -60,22 +58,24 @@ sendMessage(average2, 'Class B') //Passando parametros para dentro do bloco de c
 function checkFlunked(student) { //Função para marcar student como Flunked
     student.Flunked = false //Declaro como falso
     if (student.grade < 5) {
-        student.Flunked = true // Identifica cada student Flunked
+        student.Flunked = true // Guarda student como flunked ou não
     }
 } 
 
 function sendMessageFlunked(student) {
-    if (student.Flunked == true) {
+    if (student.Flunked == true) { //Se o student for guardado como flunked na função inteiro...
         console.log(`O student ${student.name} está Flunked`)
     }
 }
 
 function studentFlunked(students) { //junta as duas funções anteriores em uma só
-    for (let student of students) {
-        checkFlunked(student)
-        sendMessageFlunked(student)
+    for (let student of students) { //procura por studentes flunked (function checkFlunked) dentro de classA e classB
+        checkFlunked(student) //executa as funções anteriores
+        sendMessageFlunked(student) //executa as funções anteriores
     }
 }
 
 studentFlunked(classA)
 studentFlunked(classB)
+
+// ASSISTIR AULA NOVAMENTE

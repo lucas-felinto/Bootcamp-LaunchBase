@@ -1,47 +1,50 @@
-const alunosA = [
+const studentsA = [
     {
-        nome: 'Lucas',
-        nota: 10
+        name: 'Lucas',
+        grade: 10
     },
     {
-        nome: 'Aluno 2',
-        nota: 8
+        name: 'Aluno 2',
+        grade: 8
     },
     {
-        nome: 'Aluno 3',
-        nota: 7
+        name: 'Aluno 3',
+        grade: 7
     }
 ]
 
-const alunosB = [
+const studentsB = [
     {
-        nome: 'Miguel',
-        nota: 7
+        name: 'Miguel',
+        grade: 7
     },
     {
-        nome: 'Aluno 4',
-        nota: 5
+        name: 'Aluno 4',
+        grade: 5
     },
     {
-        nome: 'Aluno 5',
-        nota: 3
+        name: 'Aluno 5',
+        grade: 3
     }
 ]
 
-function calculaMedia(alunos) {
-    return ((alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3)
-} //O parâmetro alunos dentro da função funciona como uma "variável" que vai receber o valor quando executar a função.
+function calcAverage(students) {
+    return ((students[0].grade + students[1].grade + students[2].grade) / 3)
+} //O parâmetro students dentro da função funciona como uma "variável" que vai receber o valor quando executar a função.
 
-const media1 = calculaMedia(alunosA) //executa a função, passando por parametro alunosA - substitui por alunos na função e retorna a média para a constante media1
-const media2 = calculaMedia(alunosB)
+const average1 = calcAverage(studentsA) //executa a função, passando por parametro studentsA - substitui por students na função e retorna a média para a constante average1
+const average2 = calcAverage(studentsB)
 
-function enviarMensagem(media, turma) { //Cria função com dois parametros - um recebe a media e outro a turma
-    if (media > 5) {
-        console.log(`A média da ${turma} foi ${media}. Parabéns`)
+function sendMessage(average, classes) { //Cria função com dois parametros - um recebe a average e outro a classes
+    if (average > 5) {                    // Para função average, usa-se condição if else, classes é usado apenas como string
+        console.log(`A média da ${classes} foi ${average}. Parabéns`)
     } else {
-        console.log(`A média da turma ${turma} foi menor que 5.`)
+        console.log(`A média da classes ${classes} foi menor que 5.`)
     }
 }
 
-enviarMensagem(media1, 'turma A') //Passando parametros para dentro do bloco de código da função
-enviarMensagem(media2, 'turma B') //Passando parametros para dentro do bloco de código da função
+sendMessage(average1, 'classe A') //Passando parametros para dentro do bloco de código da função
+sendMessage(average2, 'classe B') //Passando parametros para dentro do bloco de código da função
+
+
+// REVISED CODE //
