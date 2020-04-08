@@ -90,9 +90,21 @@ a {
     color: #eba91bc0;
 }
 
+div.project a {
+    color: #25282B;
+    border: 1px solid #25282B;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 10pt;
+}
+
+div.project a:hover {
+    font-size: 11pt;
+}
+
 a:hover {
     font-weight: bolder;
-    font-size: 13pt;
+    font-size: 14pt;
 }
 
 div.project img {
@@ -118,12 +130,9 @@ div.project {
     color: #25282B;
 }
 
-div.project h3 {
-    background-color: ;
-}
-
 div h3 {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    padding: 8px;
 }
 
 /* FOOTER */
