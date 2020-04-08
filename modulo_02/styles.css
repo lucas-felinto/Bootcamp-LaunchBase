@@ -37,6 +37,7 @@ body {
 div#wrapper {
     text-align: center;
     margin: 20px;
+    margin-bottom: 140px;
 }
 
 div img#myfoto {
@@ -61,17 +62,37 @@ div#wrapper p {
 
 /* PROJECTS */
 
+section.projects {
+    height: 470px;
+}
+
 div.project {
     display: inline-block;
+
     background-color: #FFFFFF;
-    margin-top: 50px;
-    margin-left: 180px;
+
+    margin: 10px 5px 0 5px;
     padding: 10px;
-    width: 400px;
-    height: 200px;
+    width: 430px;
+    height: 220px;
+    position: relative;
+    left: 15%;
+
+    border: solid 1px;
+
     text-align: center;
-    border-radius: 5px;
     box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #eba91bc0;
+}
+
+a:hover {
+    font-weight: bolder;
+    font-size: 13pt;
 }
 
 div.project img {
@@ -81,8 +102,24 @@ div.project img {
     text-align: center;
 }
 
+div img#launchbase_img {
+    height: 140px;
+    padding: 0;
+    margin-top: 15px;
+}
+
+div#project4 {
+    position: relative;
+    bottom: 114px;
+
+}
+
 div.project {
     color: #25282B;
+}
+
+div.project h3 {
+    background-color: ;
 }
 
 div h3 {
