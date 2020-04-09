@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
-    border: 0px;
 }
 
 /* HEADER-ALL */
@@ -30,6 +31,9 @@ body {
     background: #eba91bc0;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
+
+    
 }
 
 /* INDEX */
@@ -63,23 +67,27 @@ div#wrapper p {
 /* PROJECTS */
 
 section.projects {
-    height: 470px;
+    max-width: 900px;
+    height: fit-content;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 div.project {
-    display: inline-block;
 
     background-color: #FFFFFF;
-
-    margin: 10px 5px 0 5px;
-    padding: 10px;
-    width: 430px;
-    height: 220px;
-    position: relative;
-    left: 15%;
-
+    color: #25282B;
     border: solid 1px;
 
+    width: 400px;
+    height: 250px;
+    margin-top: 25px;
+    margin-right: 20px;
+
+    justify-self: center;
     text-align: center;
     box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
 }
@@ -100,6 +108,7 @@ div.project a {
 
 div.project a:hover {
     font-size: 11pt;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24);
 }
 
 a:hover {
@@ -110,29 +119,74 @@ a:hover {
 div.project img {
     width: 260px;
     height: 70px;
-    padding: 20px;
     text-align: center;
+
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-div img#launchbase_img {
+div.project img#foodfy {
+    width: 80px;
+    height: 50px;
+}
+
+div.project img#chef {
+    width: 60px;
+    height: 90px;
+}
+
+div.project img#launchbase_img {
     height: 140px;
-    padding: 0;
-    margin-top: 15px;
 }
 
-div#project4 {
-    position: relative;
-    bottom: 114px;
+div p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 12pt;
 
-}
-
-div.project {
-    color: #25282B;
-}
-
-div h3 {
     margin-bottom: 18px;
     padding: 8px;
+}
+
+/* MODAL */
+
+div.modal-overlay {
+    background: rgb(0, 0, 0, 0.7);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+
+div.modal {
+    background-color: #FFFFFF;
+
+    top: 30px;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+div.modal a {
+    position: absolute right;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 0;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+/* MODAL ATIVADO */
+
+.modal-overlay-actived {
+    opacity: 1;
 }
 
 /* FOOTER */
