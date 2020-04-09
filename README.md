@@ -23,7 +23,8 @@
 - [x] Exercícios
 - [x] Desafios
 * <a href="https://github.com/lucas-felinto/Bootcamp-LaunchBase/tree/master/modulo_02">02 - Introdução ao Front End - Construindo a Primeira Página Web</a>
-- [x] Página de Portifólio
+- [x] Página de Portifólio:
+
 <a href="https://gyazo.com/ac022eecbfdab209f9ea366af3d4b323"><img src="https://i.gyazo.com/ac022eecbfdab209f9ea366af3d4b323.gif" alt="Image from Gyazo" width="1300"/></a>
 
 ## Desafios
