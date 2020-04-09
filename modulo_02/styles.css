@@ -7,6 +7,13 @@
 
 /* HEADER-ALL */
 
+/* COLORS
+
+eba91bc0 - Amarelo Inicial
+284B63 - Azul tom dracula
+*/
+
+
 header {
     padding: 32px;
     border-bottom: 1px solid;
@@ -28,12 +35,15 @@ header div a {
 /*  BODY-ALL */
 
 body {
-    background: #eba91bc0;
+    background: #284B63;
     color: white;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
 
-    
+}
+
+body.overflow {
+    overflow: hidden;
 }
 
 /* INDEX */
@@ -152,20 +162,21 @@ div p {
 
 div.modal-overlay {
     background: rgb(0, 0, 0, 0.7);
-    opacity: 0;
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
+
+    opacity: 0;
     visibility: hidden;
 }
 
 div.modal {
     background-color: #FFFFFF;
 
-    top: 30px;
-    width: 90%;
-    height: 90%;
+    top: 90px;
+    width: 60%;
+    height: 60%;
     margin: 0 auto;
 
     position: relative;
@@ -185,8 +196,9 @@ div.modal a {
 
 /* MODAL ATIVADO */
 
-.modal-overlay-actived {
+.modal-overlay.actived {
     opacity: 1;
+    visibility: visible;
 }
 
 /* FOOTER */
