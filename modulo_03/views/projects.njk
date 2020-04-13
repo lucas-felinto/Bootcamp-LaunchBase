@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Projetos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="fonts">
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" href="_icon/favicon.ico" type="image/x-icon" />
-    </style>
-</head>
-<header>
-    <div>
-        <a href="/">Sobre</a>
-        <a href="/">Projetos</a>
-    </div>
-</header>
+{% extends "layout.html" %}
 
-<body>
+{% block head %}
+
+    <title>Projetos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
     <section class="projects">
 
         <div class="project">
@@ -93,9 +84,4 @@
 
     <script src="scripts.js"></script>
 
-    <footer id="links">
-        <a href="https://www.linkedin.com/in/lucas-felinto/" target="_blank"><img src="_imgs/linkedin.png" id="in" alt=""></a>
-        <a href="https://github.com/lucas-felinto" target="_blank"><img src="_imgs/github.png" id="git" alt=""></a>
-    </footer>
-</body>
-</html>
+{% endblock %}

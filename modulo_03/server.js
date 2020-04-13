@@ -1,25 +1,25 @@
-const express = require('express') // puxa o express
-const nunjucks = require('nunjucks') // puxa o nunjucks
+const express = require('express') 
+const nunjucks = require('nunjucks') 
 
-const server = express() // joga a função do express na variável server
+const server = express() 
 
-server.use(express.static('public'))
+server.use(express.static('public')) //ainda não sei
 
-server.set("view engine", "html")
+server.set("view engine", "njk") //qual tipo de arquivo o servidor está lendo
 
 
-nunjucks.configure("views", {
+nunjucks.configure("views", { //configuração do nunjucks
     express: server
 })
 
-server.get("/", function(req, res) { // manda a resposta para o servidor
-    return res.render("index")
+server.get("/", function(req, res) { // rota para about
+    return res.render("about")
 })
 
-server.get("/projects", function(req, res) { // manda a resposta para o servidor
+server.get("/projects", function(req, res) { // rota para projects
     return res.render("projects")
 }) 
 
-server.listen(5000, function (){ //abre a porta 5000 para o servidor
+server.listen(5000, function (){
     console.log('server is running')
 })
