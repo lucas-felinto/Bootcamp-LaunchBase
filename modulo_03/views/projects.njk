@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
 
@@ -10,12 +10,14 @@
 {% block content %}
     <section class="projects">
 
+        {% for item in items %}
+
         <div class="project">
-            <img src="_imgs/logo1.png" id="project_img" alt="Casa Criativa">
+            <img src="{{item.img_src}}" id="{{item.id}}" alt="{{item.alt}}">
 
             <div class="project_description">
                 <p>
-                    Ideias para você realizar em casa durante a quarentena
+                    {{item.description}}
                 </p>
             </div>
             
@@ -24,35 +26,10 @@
             </div>
         </div>
 
-        <div class="project" >
-            <img src="_imgs/glass-logo-peq.jpg" id="project_img" alt="Google Glass">
-
-            <div class="project_description">
-                <p>
-                    Veja o mundo de uma forma diferente com o novo Google Glass
-                </p>
-            </div>
-
-            <div class="link_project">
-                <a href=""> Projeto </a>
-            </div>
-
-        </div>    
-
-        <div class="project">
-            <img src="_imgs/launchbase_logo.png" id="launchbase_img" alt="Launchbase">
-
-            <div class="project_description">
-                
-            </div>
-        </br>
-            <div class="link_project">
-                <a href=""> Projeto </a>
-            </div>
-        </div> 
+        {% endfor %}
 
         <div class="project" id="foodfy">
-            <img src="_imgs/logo.png" id="foodfy" alt="">
+            <img src="_imgs/logo.png" id="foodfy" alt="foodfy">
             <img src="_imgs/chef.png" id="chef" alt="">
             
             <div class="project_description">
