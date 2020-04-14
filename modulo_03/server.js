@@ -2,7 +2,7 @@ const express = require('express')
 const nunjucks = require('nunjucks') 
 
 const server = express() 
-const informations = require("./data")
+const projects = require("./data")
 
 server.use(express.static('public')) //ainda não sei
 
@@ -28,8 +28,26 @@ server.get("/", function(req, res) { // rota para about - rota raíz
 })
 
 server.get("/projects", function(req, res) { // rota para projects
-    return res.render("projects", {items: informations}) //passando a variável projects para o nunjucjs projects
+    return res.render("projects", {items: projects}) //passando a variável projects para o nunjucjs projects
 }) 
+
+server.get("/courses", function(req, res){ // courses = params
+    const id = req.query.id                //query = parametros enviados depois do ? - id vem depois de query
+//                                         de forma genérica, temos: params/query?id=códigodoid
+//                                         nesse caso, a const id está guardando o códigoid 
+
+    const course = projects.find(function(course){ //faz uma procura dentro da array data, se o id do curso for = ao id da url, retornará verdadeiro e o site segue a rota, se não for igual, não encontrará a página
+        if (course.id == id) {
+            return true
+        }
+    })
+
+        if (!course) {
+            res.send("Video Not Found")
+        }
+
+        return res.render("courses", { item: course } ) //passa a variável course para a página courses contendo os ids dos curos. 
+})
 
 server.listen(5000, function (){
     console.log('server is running')

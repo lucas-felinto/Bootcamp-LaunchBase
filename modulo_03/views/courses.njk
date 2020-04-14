@@ -1,0 +1,26 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>{{item.alt}}</title>
+
+{% endblock %}
+
+{% block content %}
+    <section class="projects">
+
+        <div class="project project_course">
+            <img src="{{item.img_src}}" id="{{item.id}}" alt="{{item.alt}}">
+            <div class="project_description">
+                <p>
+                    {{item.description}}
+                </p>
+            </div>
+            
+            <div class="link_project" >
+                <a href=""> Projeto </a>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
