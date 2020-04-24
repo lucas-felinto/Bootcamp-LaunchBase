@@ -16,14 +16,8 @@ const usuarios = [
 ];
 
 for (let i = 0; i < usuarios.length; i++) {
-    console.log (`${usuarios[i].nome} trabalha com ${usuarios[i].tecnologia[0]}, ${usuarios[i].tecnologia[1]};`)
+    console.log (`${usuarios[i].nome} trabalha com ${usuarios[i].tecnologias.join(',')};`)
 }
-
-//OUTRA FORMA 
-
-//  for (let usuario of usuarios) {
-//  console.log(`${usuario.nome} trabalha com ${usuario.tecnologias.join(', ')}`) PESQUISAR CONCENTO .join(', ')
-//  }
 
 
 function checaSeUsuarioUsaCSS(usuario) {
