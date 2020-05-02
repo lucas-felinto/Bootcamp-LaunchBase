@@ -36,18 +36,19 @@
 - [x] Template Enginer com **_Nunjucks_**
 - [x] Transferência de dados entre Back e Front    
 
+* 05 - Persistindo Dados da Aplicação
+- [x] PostgreSQL
 
 ## Desafios
 ### <a href="https://github.com/lucas-felinto/foodfy">Foodfy</a>
 
-* <b>Parte I - Front End com HTML, CSS e JavaScript</b>
-
 <img src="https://user-images.githubusercontent.com/62717182/79283691-f7702880-7e8e-11ea-8558-8aa118da887a.gif" width="430"  height="260"/> <img src="https://user-images.githubusercontent.com/62717182/79284054-ff7c9800-7e8f-11ea-8f78-9ca3f6035a06.gif" width="430" height="260"/>
-
-* <b>Parte II - Back End com Node.js: npm, nodemon, express, nonjucks</b>
-<img src="https://user-images.githubusercontent.com/62717182/79284845-3bb0f800-7e92-11ea-9ce5-90b4eb1ba4a7.png" width="1300"/>
 <img src="https://user-images.githubusercontent.com/62717182/79284744-f4c30280-7e91-11ea-9c8b-5fcceb0a5511.gif" width="1300"/>
+<img src="(https://user-images.githubusercontent.com/62717182/80850913-ed6f5900-8bf4-11ea-80e7-89676cd8889e.gif" width="1300"/>
 
+### <a href="https://github.com/lucas-felinto/gym_manager">Gym Manager</a>
+<img src="https://user-images.githubusercontent.com/62717182/80836063-62796900-8bca-11ea-8ebc-6df93d5bba91.gif" width="1300"/>
+<img src="https://user-images.githubusercontent.com/62717182/80835919-18908300-8bca-11ea-821b-4b5aa1190e9f.gif" width="1300"/>
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
