@@ -49,6 +49,7 @@
 ### <a href="https://github.com/lucas-felinto/gym_manager">Gym Manager</a>
 <img src="https://user-images.githubusercontent.com/62717182/80836063-62796900-8bca-11ea-8ebc-6df93d5bba91.gif" width="1300"/>
 <img src="https://user-images.githubusercontent.com/62717182/80835919-18908300-8bca-11ea-821b-4b5aa1190e9f.gif" width="1300"/>
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
